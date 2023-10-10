@@ -1,0 +1,21 @@
+def somme_elements_distincts(ensemble1, ensemble2):
+    # Initialiser la somme
+    somme = 0
+    
+    # Ajouter les éléments distincts de l'ensemble 1
+    for elem in ensemble1:
+        if elem not in ensemble2:
+            somme += elem
+    
+    # Ajouter les éléments distincts de l'ensemble 2
+    for elem in ensemble2:
+        if elem not in ensemble1:
+            somme += elem
+    
+    return somme
+
+# Exemple d'utilisation
+ensemble1 = [3, 1, 7, 9]
+ensemble2 = [2, 4, 1, 9, 3]
+resultat = somme_elements_distincts(ensemble1, ensemble2)
+print("Somme des éléments distincts :", resultat)

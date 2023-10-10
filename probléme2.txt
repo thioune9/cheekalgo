@@ -1,0 +1,24 @@
+def dot_product(v1, v2):
+    ps = 0  # Initialiser le produit scalaire à 0
+    
+    # Calculer le produit scalaire
+    for i in range(len(v1)):
+        ps += v1[i] * v2[i]
+    
+    return ps
+
+def sont_orthogonaux(v1, v2):
+    # Calculer le produit scalaire
+    ps = dot_product(v1, v2)
+    
+    # Vérifier si le produit scalaire est nul (vecteurs orthogonaux)
+    return ps == 0
+
+# Exemple d'utilisation
+v1 = [1, 2, -1]
+v2 = [2, -1, -2]
+if sont_orthogonaux(v1, v2):
+    print("Les vecteurs sont orthogonaux.")
+else:
+    print("Les vecteurs ne sont pas orthogonaux.")
+
